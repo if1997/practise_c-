@@ -10,6 +10,8 @@
 
 #include <QMouseEvent>
 
+#include <QVector>
+#include <QPoint>
 namespace Ui {
 class Widget;
 }
@@ -25,6 +27,8 @@ public:
 
 private:
     Ui::Widget *ui;
+    QVector<int> num;
 };
+
 
 #endif // WIDGET_H
