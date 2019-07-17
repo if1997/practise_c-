@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>xian_Metro.png</file>
+    </qresource>
+</RCC>

@@ -15,6 +15,9 @@ public:
     explicit Widget(QWidget *parent = 0);
     ~Widget();
 
+public slots:
+    void slot_shift();
+
 private:
     Ui::Widget *ui;
 };
