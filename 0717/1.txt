@@ -1,0 +1,23 @@
+一、qt的学习
+1.qt软件的使用
+（1）创建项目，会生成头文件（widget.h）、源文件(widget.cpp\main.cpp)、界面文件(widget.ui)以及demo.pro(打开项目）。
+2.QpushButton的继承关系
+QpushButton----->QAbstractButton------>QWidget
+QpushButto有QWidget中的属性，我们要对新创建的QpushButton设置父亲，即所在的对象
+3.组件事件的控制----信号槽
+  信号槽的注册，提取约定发送信号的人，发送什么信号 ，接受信号的人，在接到信号后该如何处理信号
+信号响应函数的定义，首先在widget.h中定义信号槽的函数名以及数据，然后再widget.cpp中定义响应函数的内容。
+4.界面的编辑：代码与图形界面
+5.资源的添加
+将图片添加到label中
+Qpixmap
+6.重新绘制图形
+窗口大小发生变化，要重新绘制
+<QPainter>  <QPaintEngine>     <QPaintDevice>
+<QPaintEvent> 
+7.鼠标事件
+点击，移动
+8.还原操作
+
+
+

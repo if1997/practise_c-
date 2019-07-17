@@ -7,7 +7,6 @@ Widget::Widget(QWidget *parent) :
     ui(new Ui::Widget)
 {
     ui->setupUi(this);
-    pix=new ;
     for (int i =1;i<=12;i++)
     {
         ui->comboBox_month->addItem(QString::asprintf("%d",i));
@@ -97,8 +96,8 @@ void Widget::slot_shift()
 void Widget::paintEvent(QPaintEvent *event)
 {
     QPainter p(this);
-    p.setPen(Qpen(Qt::blue,Qt::SolidLine,Qt::SquareCap));
-    double val=(offsetX-150)*(offsetX-150)+(offsetY-100)*(offsetY-100)
+    p.setPen(QPen(Qt::blue,Qt::SolidLine,Qt::SquareCap,Qt::BevelJoin));
+    double val=(offsetX-150)*(offsetX-150)+(offsetY-100)*(offsetY-100);
     if(val<r*r && click)
     {
         p.setBrush(Qt::gray);
@@ -117,7 +116,7 @@ void Widget::mousePressEvent(QMouseEvent *event)
     if (event->button()==Qt::LeftButton)
     {
         this->setWindowTitle("sus");
-        click=True;
+        click=true;
         offsetX=event->x();
         offsetY=event->y();
         QString str_x=QString::number(event->x());
@@ -140,5 +139,7 @@ void Widget::mouseMoveEvent(QMouseEvent *event)
 
 void Widget::mouseReleaseEvent(QMouseEvent *event)
 {
-
+    //offsetX=offsetY=0;
+    click=false;
+    update();
 }

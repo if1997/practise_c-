@@ -3,16 +3,13 @@
 
 #include <QWidget>
 
-#include <QPixmap>
-
-#include <QPaintEvent>
-#include <QPainter>
 #include <QPaintDevice>
+#include <QPaintEngine>
+#include <QPainter>
+#include <QPaintEvent>
 
 #include <QMouseEvent>
 
-
-#include <QVector>
 namespace Ui {
 class Widget;
 }
@@ -25,20 +22,9 @@ public:
     explicit Widget(QWidget *parent = 0);
     ~Widget();
     void virtual paintEvent(QPaintEvent *event);
-    void mouseMoveEvent(QMouseEvent *event);
-    void mousePressEvent(QMouseEvent *event);
-    void mouseReleaseEvent(QMouseEvent *event);
-    
-
-public slots:
-    void slot_shift();
 
 private:
     Ui::Widget *ui;
-    double offsetX;
-    double offsetY;
-    double r;
-    bool click;
 };
 
 #endif // WIDGET_H
