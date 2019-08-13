@@ -8,7 +8,7 @@ int main()
 {
     //定义一个vector数据结构的数据data
     vector<int> data;
-    vector<int> data1(5);
+    vector<int> data1(2);
 
     /* 插入 */
     //尾部插入 data.push_back(int m);---在data的最后面插入m；
@@ -23,7 +23,7 @@ int main()
     data1.insert(data1.begin(),20);  //在头部插入一个元素20
     data1.push_back(14);
     data1.insert(data1.begin()+1,17);   //在下标为1的位置上插入17（从0开始）
-    //现在的data1中的数据为20，17，10，14
+    //现在的data1中的数据为20，17，10，0,14
 
     //返回头部第一个元素的地址及数据
     cout << "data中的头部第一个元素为："<<*data.begin()<<endl;
@@ -39,20 +39,22 @@ int main()
     
     //排序
     sort(data.begin(),data.end());  //升序
-    reverse(data.begin(),data.end()); //降序
+    reverse(data1.begin(),data1.end()); //倒置  
 
     //遍历
     vector<int>::iterator it;  //定义一个遍历容器
-    cout <<"\ndata1遍历\n";
+    cout <<"\ndata1导致\n";
     for(it=data1.begin();it!=data1.end();it++)
     {
-        cout<<"地址：" <<"\t数据："<<*it<<endl;
+        cout<<*it<<" ";
     }
     cout <<"\ndata遍历\n";
-    for(it=data.begin();it!=data.end();it++)
+    for(int i=0;i<data.size();i++)
     {
-        cout<<"地址：" <<"\t数据："<<*it<<endl;
+        cout << data.at(i) <<" ";
     }
+
+
 
     //修改
     data1[2]=100;
