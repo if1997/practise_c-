@@ -18,7 +18,7 @@ int main()
 
     //string s(s2,pos2)
     string s8="asac";
-    string s9(s8,2);//从s2的第二个字符开始拷贝，不能超过s2的size
+    string s9(s8,2);//从s2的第二个 字符开始拷贝，不能超过s2的size
 
     //string s(s2,pos2,len2)
     string s10="qweqweqweq";
